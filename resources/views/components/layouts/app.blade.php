@@ -5,7 +5,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.122.0">
-    <title>KayondoBodaLoans</title>
+    <title>A.A</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
   </head>
 <body>
@@ -16,13 +16,19 @@
     </symbol>
 </svg>
 
-<header class="navbar sticky-top flex-md-nowrap p-1">
+<header class="navbar sticky-top flex-md-nowrap p-1 nav-bg">
     <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6" href="#">
         <span class="slate">##</span>
     </a>
     <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6" href="#">
-        <span class="slate">##</span>
-        <span class="slate">Wasswa Speed</span>
+        <span class="slate">#</span>
+        <span class="badge p-1 pe-2 text-light-emphasis bg-warning-subtle rounded-pill">
+            <svg xmlns="http://www.w3.org/2000/svg" class="rounded-circle me-1" width="24" height="24" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                </svg><span class="">{{auth()->user()->username}}</span>
+        </span>
+
     </a>
     <ul class="navbar-nav flex-row d-md-none">
         <li class="nav-item text-nowrap">
@@ -46,49 +52,37 @@
         <div class="offcanvas-body d-md-flex flex-column p-0 pt-lg-3 overflow-y-auto">
           <ul class="nav flex-column mb-3">
             <li class="nav-item">
-              <a class="nav-link d-flex align-items-center gap-2 slate" aria-current="page" href="">
+              <a class="nav-link slate" aria-current="page" href="{{route('dashboard')}}">
                 Dashboard
               </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link d-flex align-items-center gap-2 slate" href="">
+                <a class="nav-link slate" href="">
                   Company
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link d-flex align-items-center gap-2 slate" href="">
+                <a class="nav-link slate" href="">
                   Branch
                 </a>
             </li>
+            {{-- <li class="nav-item">
+                <a class="nav-link slate" href="{{route('two-factor')}}">
+                  Two Factor Authet
+                </a>
+              </li> --}}
             <li class="nav-item">
-              <a class="nav-link d-flex align-items-center gap-2 slate" href="">
+              <a class="nav-link slate" href="{{route('profile')}}">
                 Profile
               </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link d-flex align-items-center gap-2 slate" href="">
-                  Sign out
-                </a>
+                <form action="{{route('logout')}}" method="post">
+                    @csrf
+                    <button type="submit" class="nav-link slate">Sign out</button>
+                </form>
             </li>
           </ul>
-
-          @auth
-            <ul class="nav flex-column mb-auto">
-                <li class="nav-item">
-                <a class="nav-link d-flex align-items-center gap-2 slate" href="">
-                    Profile
-                </a>
-                </li>
-                <li class="nav-item">
-                    <form action="" method="post">
-                        @csrf
-                        <button class="nav-link d-flex align-items-center gap-2 slate" href="#">
-                            Sign out
-                        </button>
-                    </form>
-                </li>
-            </ul>
-          @endauth
         </div>
       </div>
     </div>

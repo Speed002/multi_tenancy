@@ -1,5 +1,5 @@
 <x-layouts.auth>
-    <div class="px-3">
+    <div class="h-100 p-3">
         <form action="{{route('register')}}" method="POST">
             @csrf
             <div class="mb-1">
@@ -44,13 +44,18 @@
                     <small class="text-danger text-xs">{{$message}}</small>
                 @enderror
             </div>
-            <div class="mb-3">
+            <div class="">
                 <label for="exampleFormControlInput1" class="form-label slate">Confirm Password</label>
                 <input type="password" class="form-control" name="password_confirmation" id="password_confirmation" >
                 @error('password_confirmation')
                     <small class="text-danger text-xs">{{$message}}</small>
                 @enderror
             </div>
+            <div class="mb-3">
+                <small>
+                    <a href="{{route('login')}}" class="small slate-light">Go back to login!</a>&nbsp;
+                </small>
+              </div>
           <button class="btn btn-light btn-sm slate-light" type="submit">Register</button>
         </form>
       </div>

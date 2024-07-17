@@ -66,11 +66,11 @@
                   Branch
                 </a>
             </li>
-            {{-- <li class="nav-item">
+            <li class="nav-item">
                 <a class="nav-link slate" href="{{route('two-factor')}}">
-                  Two Factor Authet
+                  Enable 2F-Auth
                 </a>
-              </li> --}}
+              </li>
             <li class="nav-item">
               <a class="nav-link slate" href="{{route('profile')}}">
                 Profile

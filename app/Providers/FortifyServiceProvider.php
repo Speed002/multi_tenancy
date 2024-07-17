@@ -41,7 +41,7 @@ class FortifyServiceProvider extends ServiceProvider
             return view('dashboard.two-factor-enable');
         });
         Fortify::twoFactorChallengeView(function(){
-            return view('dashboard.two-factor-challenge');
+            return view('auth.two-factor-challenge');
         });
         Fortify::authenticateUsing(function(Request $request){
             $user = User::where('email', $request->email)

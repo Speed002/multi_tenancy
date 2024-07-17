@@ -4,7 +4,7 @@
         <form action="{{route('password.confirm')}}" method="POST">
             @csrf
             <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label slate-light">Comfirm your password to enable 2-factor authentication.</label>
+                <label for="exampleFormControlInput1" class="form-label slate-light">Comfirm your password.</label>
                 <input type="password" class="form-control" name="password" id="password" >
                 @error('password')
                     <small class="text-danger text-xs">{{$message}}</small>

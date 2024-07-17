@@ -5,6 +5,9 @@
     background-color: #92111e !important;
     border: none !important;
 }
+.bg-transparent{
+    background-color: rgba(33, 33, 33, 0.3) !important;
+}
 body{
     font-family: "Poppins", sans-serif !important;
     background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
@@ -86,6 +89,8 @@ padding-bottom: .75rem;
 .navbar .form-control {
 padding: .75rem 1rem;
 }
+
+/* custom styles */
 .btn-group .btn {
     font-size: 12px !important;
 }
@@ -96,3 +101,4 @@ padding: .75rem 1rem;
 .nav-bg{
     background-color: #4e7290 !important;
 }
+

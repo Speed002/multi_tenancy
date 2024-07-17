@@ -1,6 +1,6 @@
 <x-layouts.auth>
-    <div class="h-100 px-3">
-        <form action="{{route('login')}}" method="POST">
+    <div class="h-100 p-3">
+        <form action="{{route('login')}}" method="POST"> 
             @csrf
             @if (session('status'))
             <p class="text-primary-emphasis">{{session('status')}}</p>
@@ -22,6 +22,7 @@
             <input type="hidden" name="remember" value="true">
           <div class="mb-3">
             <small>
+                <a href="{{route('register')}}" class="small slate-light">Register Here!</a>&nbsp;
                 <a href="{{route('password.request')}}" class="small slate-light">Forgot password?</a>
             </small>
           </div>

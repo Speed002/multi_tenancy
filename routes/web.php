@@ -8,6 +8,7 @@ use App\Http\Controllers\TwoFactorController;
 
 // Routes inside this group require authentication
 Route::middleware(['auth'])->group(function () {
+    // redirected routes
     // Route::redirect('/home', '/')->name('dashboard');
     Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
     Route::get('/auth/two-factor', TwoFactorController::class)->name('two-factor');
@@ -16,4 +17,5 @@ Route::middleware(['auth'])->group(function () {
 // Routes outside the 'auth' middleware group
 Route::middleware(['guest'])->group(function () {
     Route::get('/login', [AuthPagesController::class, 'login'])->name('login');
+
 });

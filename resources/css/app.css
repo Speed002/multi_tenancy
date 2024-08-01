@@ -73,8 +73,9 @@ a{
     border:none !important;
 }
 .list-group-item:hover{
-    background-color: rgba(33, 33, 33, 0.3);
+    background-color: rgba(0, 0, 0, 0.421) !important;
     cursor: pointer;
+    transition: .01s ease-in;
 }
 @media (min-width: 767px) {
     .sidebar .offcanvas-lg {
@@ -121,5 +122,11 @@ padding: .75rem 1rem;
 }
 .nav-bg{
     background-color: #4e7290 !important;
+}
+div .bg-transparent{
+    background: rgba(0, 0, 0, 0.3) !important;
+    padding: 10px 10px;
+    border-radius: 5px;
+    margin:10px 0;
 }
 
